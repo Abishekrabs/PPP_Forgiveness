@@ -1,0 +1,22 @@
+.nameSpaceToolBar{
+    height: 30px;
+    background: black;
+}
+
+.iconToolBar{
+    height: 68px;
+    background: rgb(239,246,255);
+    background: linear-gradient(90deg, rgba(239,246,255,1) 0%, rgba(160,197,247,1) 57%, rgba(50,129,237,1) 87%);}
+.contentCard{
+    width: 1334px;
+    border-radius: 0px;
+    box-shadow: none !important;
+    transition: none !important;
+    height: auto;
+}
+
+.logo{
+    width: 247px;
+    height: 67px;
+    margin-left: -15px;
+}
