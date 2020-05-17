@@ -1,3 +1,113 @@
-<p>
-  forgiveness works!
-</p>
+<mat-horizontal-stepper labelPosition="bottom">
+  <!-- Jabers to do -> Start Region -->
+  <!-- Application Information Step -->
+  <mat-step [stepControl]="applicationInformationForm" state="done">
+    <form [formGroup]="applicationInformationForm">
+      <ng-template matStepLabel>
+        <span [ngStyle]="{'color': applicationInformationFlag ? 'rgb(136, 172, 243)' : 'black'}">
+          <mat-icon class="stypeIcon">insert_drive_file</mat-icon>
+            Application Information
+         </span>
+      </ng-template>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext (click)="highlightForgivenessQuestions()">Continue</button>
+      </div>
+    </form>
+  </mat-step>
+<!-- Jabers to do -> End Region -->
+
+<!-- Malathi to do -> Start Region -->
+<!-- Forgiveness Questions Step -->
+  <mat-step [stepControl]="forgivenessQuestionsForm" state="done">
+    <form [formGroup]="forgivenessQuestionsForm">
+      <ng-template matStepLabel>
+        <span [ngStyle]="{'color': forgivenessQuestionsFlag ? 'rgb(136, 172, 243)' : 'black'}">
+          <mat-icon class="stypeIcon">description</mat-icon>
+          Forgiveness Questions
+         </span>
+      </ng-template>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Test</mat-label>
+        <input matInput formControlName="secondCtrl" placeholder="Forgiveness Questions">
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious (click)="highlightApplicationInformation()">Go Back</button>
+        <button mat-button matStepperNext (click)="highlightForgivenessAmount()">Continue</button>
+      </div>
+    </form>
+  </mat-step>
+  <!-- Malathi to do -> End Region -->
+
+  <!-- Forgiveness Amount Step -->
+  <mat-step [stepControl]="forgivenessAmountForm" state="done">
+    <form [formGroup]="forgivenessAmountForm">
+      <ng-template matStepLabel>
+        <span [ngStyle]="{'color': forgivenessAmountFlag ? 'rgb(136, 172, 243)' : 'black'}">
+          <mat-icon class="stypeIcon" style="margin-left: 54px;">attach_money</mat-icon>
+          Forgiveness Amount
+         </span>
+      </ng-template>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Payroll Costs</mat-label>
+        <input matInput formControlName="payrollCosts" placeholder="Forgiveness Amount">
+      </mat-form-field>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Covered Mortgage Interest</mat-label>
+        <input matInput formControlName="coveredMortgageInterest" placeholder="Forgiveness Amount">
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious (click)="highlightForgivenessQuestions()">Go Back</button>
+        <button mat-button matStepperNext (click)="highlightDocumentUpload()">Continue</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!-- Document Upload Step -->
+  <mat-step [stepControl]="documentUploadForm" state="done">
+    <form [formGroup]="documentUploadForm">
+      <ng-template matStepLabel>
+        <span [ngStyle]="{'color': documentUploadFlag ? 'rgb(136, 172, 243)' : 'black'}">
+          <mat-icon class="stypeIcon" style="margin-left: 45px;">open_in_browser</mat-icon>
+          Document Upload
+         </span>
+      </ng-template>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Test</mat-label>
+        <input matInput placeholder="Document Upload">
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious (click)="highlightForgivenessAmount()">Go Back</button>
+        <button mat-button matStepperNext (click)="highlightReviewAndTerms()">Continue</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!-- Review And Terms Step -->
+  <mat-step [stepControl]="reviewAndTermsForm" state="done">
+    <form [formGroup]="reviewAndTermsForm">
+      <ng-template matStepLabel>
+        <span [ngStyle]="{'color': reviewAndTermsFlag ? 'rgb(136, 172, 243)' : 'black'}">
+          <mat-icon class="stypeIcon" style="margin-left: 47px;">rate_review</mat-icon>
+          Review And Terms
+         </span>
+      </ng-template>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Test</mat-label>
+        <input matInput placeholder="Review and Terms">
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious (click)="highlightDocumentUpload()">Go Back</button>
+        <button mat-button matStepperNext>Submit Application</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <ng-template matStepperIcon="done">
+    <mat-icon>done</mat-icon>
+  </ng-template>
+  
+</mat-horizontal-stepper>

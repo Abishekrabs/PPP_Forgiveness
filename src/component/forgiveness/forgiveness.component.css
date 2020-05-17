@@ -1,0 +1,68 @@
+/* .mat-stepper-horizontal {
+    margin-top: 5px;
+  } 
+.mat-form-field {
+    margin-top: 16px;
+  } */
+::ng-deep .mat-horizontal-stepper-header {
+    pointer-events: none !important;
+    box-sizing: border-box;
+    flex-direction: column-reverse !important;
+    height: auto;
+}
+
+::ng-deep .mat-horizontal-stepper-header .mat-step-label {
+    padding: 0px 0px 6px !important;
+}
+::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header {
+    box-sizing: border-box;
+    flex-direction: column;
+    height: auto;
+    padding: 0px !important;
+}
+/* .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::before, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::before { 
+    border-top-width: 4px;
+    border-top-color: blue;
+  }
+  
+  .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::after, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::after {
+    border-top-width: 4px;
+    border-top-color: blue;
+  }
+  
+  .mat-stepper-horizontal-line {
+    border-top-width: 4px;
+    border-top-color: blue;
+  } */
+  ::ng-deep .mat-step-header .mat-step-icon {
+    background-color: rgb(136, 172, 243);
+  }
+  .stypeIcon {
+    position: fixed;
+    margin-top: -30px;
+    margin-left: 60px;
+}
+::ng-deep .mat-horizontal-stepper-header-container {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin-top: 33px;
+}
+/* ::ng-deep .mat-step-header .mat-step-icon-state-edit {
+    background-color: #3f51b5;
+    color: red;
+} */
+::ng-deep .mat-step-header .mat-step-icon-state-done {
+    background-color: white !important;
+    color: rgb(136, 172, 243);
+}
+::ng-deep .mat-step-header .mat-step-icon-selected{
+    background-color: rgb(136, 172, 243) !important;
+    color: white;
+}
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: white;
+    border-style: solid !important;
+    border: 1px;
+    border-color: rgb(224,224,224) !important;
+}
