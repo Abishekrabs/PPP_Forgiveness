@@ -8,11 +8,11 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 })
 export class ForgivenessComponent implements OnInit {
 
-  applicationInformationFlag: boolean = true;
-  forgivenessQuestionsFlag: boolean = false;
-  forgivenessAmountFlag: boolean = false;
-  documentUploadFlag: boolean = false;
-  reviewAndTermsFlag: boolean = false;
+  applicationInformationFlag: boolean;
+  forgivenessQuestionsFlag: boolean;
+  forgivenessAmountFlag: boolean;
+  documentUploadFlag: boolean;
+  reviewAndTermsFlag: boolean;
 
   applicationInformationForm: FormGroup;
   forgivenessQuestionsForm: FormGroup;
@@ -23,6 +23,12 @@ export class ForgivenessComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
+    this.applicationInformationFlag = true;
+    this.forgivenessQuestionsFlag = false;
+    this.forgivenessAmountFlag = false;
+    this.documentUploadFlag = false;
+    this.reviewAndTermsFlag = false;
+    
     this.applicationInformationForm = this.formBuilder.group({
       firstCtrl: ['', Validators.required]
     });
