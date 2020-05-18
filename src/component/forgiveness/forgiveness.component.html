@@ -9,10 +9,12 @@
             Application Information
          </span>
       </ng-template>
-      <mat-form-field>
+      <!-- Do Validations here  -> Jabers
+        <mat-form-field>
         <mat-label>Name</mat-label>
         <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
+      </mat-form-field> -->
+      <!-- Jabers -->
       <div>
         <button mat-button matStepperNext (click)="highlightForgivenessQuestions()">Continue</button>
       </div>
@@ -30,10 +32,12 @@
           Forgiveness Questions
          </span>
       </ng-template>
-      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+      <!-- Do Validations here  -> Malathi
+        <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
         <mat-label>Test</mat-label>
         <input matInput formControlName="secondCtrl" placeholder="Forgiveness Questions">
-      </mat-form-field>
+      </mat-form-field> -->
+      <!-- Malathi -->
       <div>
         <button mat-button matStepperPrevious (click)="highlightApplicationInformation()">Go Back</button>
         <button mat-button matStepperNext (click)="highlightForgivenessAmount()">Continue</button>
