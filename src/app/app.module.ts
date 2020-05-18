@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatStepperModule} from '@angular/material/stepper';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatStepperModule
+    MatStepperModule,
+    MatRadioModule
   ],
   providers: [{
     provide: STEPPER_GLOBAL_OPTIONS,
