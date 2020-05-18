@@ -66,3 +66,50 @@
     border: 1px;
     border-color: rgb(224,224,224) !important;
 }
+/* jabers */
+
+::ng-deep .mat-form-field-infix {
+  text-align:left;
+  text-indent: 12px;
+   display: block;
+   position: relative;
+   flex: auto;
+   min-width: 0;
+   font-size: 14px;
+   width: 280px !important;
+   height: 20px;
+   padding-top: 12px;
+}
+::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+   padding: 0.2em 12px !important;
+   
+}
+
+::ng-deep .mat-form-field-label-wrapper {
+   top: -1.0em;
+   
+}
+
+.goBackButton{
+   position:absolute;
+   bottom:10%;
+   border-style: solid;
+   border-width: 1px;
+   border-color:rgb(90,141,238);
+   left:65%;
+   background-color: white;
+   color:rgb(90,141,238);
+   border-radius: 3px;
+}
+.continueButton{
+  position:absolute;
+  bottom:10%;
+  border-style: solid;
+  border-width: 1px;
+  border-color:rgb(90,141,238);
+  left:85%;
+  background-color: white;
+  color:rgb(90,141,238);
+  border-radius: 3px;
+}
+/* jabers */

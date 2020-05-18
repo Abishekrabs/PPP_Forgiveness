@@ -14,9 +14,104 @@
         <mat-label>Name</mat-label>
         <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
       </mat-form-field> -->
+      <p style="color: rgb(59,111,184);font-size: 16px;margin-left: 70px">Review Application Information</p>
+      <p style="color: rgb(129,129,129);margin-left: 70px">Please review bussiness and authorized signer details</p>  
+      <p style="color: rgb(59,111,184);font-size: 16px;margin-left: 70px">Bussiness information</p>
+      
+
+      <mat-form-field style=" margin-left: 70px;font-size: 16px;" appearance="outline">
+        <mat-label>Enitity name</mat-label>
+        <input matInput class="input">
+      </mat-form-field>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>DBA or Tradername(if applicable)</mat-label>
+        <input matInput>
+      </mat-form-field>
+      
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Tax Identification Number/SSN if sole Prop</mat-label>
+        <input matInput >
+      </mat-form-field>
+      <br>
+      <mat-form-field style="margin-left: 70px; font-size: 16px;" appearance="outline">
+        <mat-label>Street Name</mat-label>
+        <input matInput >
+      </mat-form-field>
+     
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Apt,Suite,Bidg,etc</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>City</mat-label>
+        <input matInput >
+      </mat-form-field>
+      <br>
+      <mat-form-field style="margin-left: 70px; font-size: 16px; width:155px" appearance="outline">
+        <mat-label>State</mat-label>
+        <input matInput >
+      </mat-form-field>
+     
+      <mat-form-field style="margin-left: 10px; font-size: 16px; width:152px" appearance="outline">
+        <mat-label>Zipcode</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field style="margin-left: 18px; font-size: 16px;" appearance="outline">
+        <mat-label>Business Phone Number</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Business Email Address</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <p style="color:rgb(59,111,184);font-size: 16px;margin-left: 70px">Authorized Signer Information</p>   
+      <mat-form-field style=" margin-left: 70px;font-size: 16px;" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput class="input">
+      </mat-form-field>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>Street Name</mat-label>
+        <input matInput >
+      </mat-form-field>
+      <br>
+      <mat-form-field style="margin-left: 70px; font-size: 16px;" appearance="outline">
+        <mat-label>Apt,Suite,Bidg etc</mat-label>
+        <input matInput >
+      </mat-form-field>
+     
+      <mat-form-field style="margin-left: 10px; font-size: 16px;" appearance="outline">
+        <mat-label>City</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;width:155px" appearance="outline">
+        <mat-label>State</mat-label>
+        <input matInput >
+      </mat-form-field>
+      <mat-form-field style="margin-left: 10px; font-size: 16px;width:165px" appearance="outline">
+        <mat-label>Ziipcode</mat-label>
+        <input matInput >
+      </mat-form-field>
+      <p style="color: rgb(59,111,184);font-size: 16px;margin-left: 70px">Contact Information</p> 
+      <p style="color: rgb(129,129,129);margin-left: 70px">There will be a phone number and email PNC will correspond with</p>
+      <mat-form-field style="margin-left: 70px; font-size: 16px;" appearance="outline">
+        <mat-label>Contact Phone Number</mat-label>
+        <input matInput >
+      </mat-form-field>
+     
+      <mat-form-field style="margin-left: 10px; font-size: 26px;" appearance="outline">
+        <mat-label>Contact Email Address</mat-label>
+        <input matInput>
+      </mat-form-field>
+      
       <!-- Jabers -->
       <div>
-        <button mat-button matStepperNext (click)="highlightForgivenessQuestions()">Continue</button>
+      <button class="goBackButton">Go Back</button>
+        <button mat-button matStepperNext class="continueButton" (click)="highlightForgivenessQuestions()">Continue</button>
       </div>
     </form>
   </mat-step>
@@ -37,6 +132,35 @@
         <mat-label>Test</mat-label>
         <input matInput formControlName="secondCtrl" placeholder="Forgiveness Questions">
       </mat-form-field> -->
+      <mat-card>
+        <mat-radio-group>
+         <p>This is the first question of this page</p>
+            <mat-radio-button class value=1 >Yes</mat-radio-button>
+            <mat-radio-button value=2 >No</mat-radio-button>
+           </mat-radio-group>
+       </mat-card>
+       <mat-card>
+         <mat-radio-group>
+          <p>This is the second question of this page</p>
+          <mat-radio-button value=1 >Yes</mat-radio-button>
+          <mat-radio-button value=2 >No</mat-radio-button>
+         </mat-radio-group>
+         </mat-card>
+         <mat-card>
+           <mat-radio-group>
+          <p>This is the  third question of this page</p>
+          <mat-radio-button value=1 >Yes</mat-radio-button>
+          <mat-radio-button value=2 >No</mat-radio-button>
+           </mat-radio-group>
+         </mat-card>
+       <mat-card>
+         <mat-radio-group>
+          <p>This is the fourth question of this page</p>
+          <mat-radio-button value=1 >Yes</mat-radio-button>
+          <mat-radio-button value=2 >No</mat-radio-button>
+         </mat-radio-group>
+         </mat-card> 
+       
       <!-- Malathi -->
       <div>
         <button mat-button matStepperPrevious (click)="highlightApplicationInformation()">Go Back</button>
